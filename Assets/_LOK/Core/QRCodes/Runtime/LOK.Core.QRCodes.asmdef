@@ -1,0 +1,6 @@
+{
+	"name": "LOK.Core.QRCodes",
+	"references": [
+		"Unity.TextMeshPro"
+	]
+}

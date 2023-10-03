@@ -1,0 +1,8 @@
+{
+  "name": "IIMEngine.Movements2D.Feel",
+  "references": [
+    "IIMEngine.Movements2D",
+    "MoreMountains.Feedbacks",
+    "IIMEngine.Entities.Target"
+  ]
+}

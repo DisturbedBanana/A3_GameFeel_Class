@@ -1,0 +1,7 @@
+{
+	"name": "LOK.Core.Rooms.QRCodes",
+	"references": [
+		"LOK.Core.Rooms",
+		"LOK.Core.QRCodes"
+	]
+}

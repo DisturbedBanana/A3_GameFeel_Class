@@ -1,0 +1,7 @@
+{
+	"name": "IIMEngine.Camera.Feel",
+	"references": [
+		"IIMEngine.Camera",
+		"MoreMountains.Feedbacks"
+	]
+}

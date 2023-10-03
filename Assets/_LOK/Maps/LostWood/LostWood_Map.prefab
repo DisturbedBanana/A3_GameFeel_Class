@@ -1,0 +1,217 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3594978520830239157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3529440854984557388}
+  - component: {fileID: 8797597837643217739}
+  m_Layer: 0
+  m_Name: LostWood_Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3529440854984557388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594978520830239157}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2239189082545506856}
+  - {fileID: 3822401776496157513}
+  - {fileID: 1104543470490225515}
+  m_Father: {fileID: 0}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8797597837643217739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594978520830239157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbcba05e41274168b13603505107f4c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mapID: LostWood
+  _musicName: Exploration
+--- !u!1001 &4823658882111086190
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3529440854984557388}
+    m_Modifications:
+    - target: {fileID: 258073309833162654, guid: 7c93883a429a1544b8b6e745013c0d88, type: 3}
+      propertyPath: m_Name
+      value: LostWood_Room_SwordDungeonEntrance
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 7c93883a429a1544b8b6e745013c0d88, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 7c93883a429a1544b8b6e745013c0d88, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 7c93883a429a1544b8b6e745013c0d88, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 7c93883a429a1544b8b6e745013c0d88, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 7c93883a429a1544b8b6e745013c0d88, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 7c93883a429a1544b8b6e745013c0d88, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 7c93883a429a1544b8b6e745013c0d88, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7c93883a429a1544b8b6e745013c0d88, type: 3}
+--- !u!4 &1104543470490225515 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5594935687799346437, guid: 7c93883a429a1544b8b6e745013c0d88, type: 3}
+  m_PrefabInstance: {fileID: 4823658882111086190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5959958605391290157
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3529440854984557388}
+    m_Modifications:
+    - target: {fileID: 258073309833162654, guid: 0309dad7c44150c4b81bc7485ff150a4, type: 3}
+      propertyPath: m_Name
+      value: LostWood_Room_Start
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 0309dad7c44150c4b81bc7485ff150a4, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 0309dad7c44150c4b81bc7485ff150a4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 0309dad7c44150c4b81bc7485ff150a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 0309dad7c44150c4b81bc7485ff150a4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 0309dad7c44150c4b81bc7485ff150a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 0309dad7c44150c4b81bc7485ff150a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 0309dad7c44150c4b81bc7485ff150a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0309dad7c44150c4b81bc7485ff150a4, type: 3}
+--- !u!4 &2239189082545506856 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5594935687799346437, guid: 0309dad7c44150c4b81bc7485ff150a4, type: 3}
+  m_PrefabInstance: {fileID: 5959958605391290157}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8696119328448165452
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3529440854984557388}
+    m_Modifications:
+    - target: {fileID: 258073309833162654, guid: 4998add3d43ef244daa965ebff9309fa, type: 3}
+      propertyPath: m_Name
+      value: LostWood_Room_Labyrinth
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 4998add3d43ef244daa965ebff9309fa, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 4998add3d43ef244daa965ebff9309fa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 4998add3d43ef244daa965ebff9309fa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 4998add3d43ef244daa965ebff9309fa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 4998add3d43ef244daa965ebff9309fa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 4998add3d43ef244daa965ebff9309fa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 4998add3d43ef244daa965ebff9309fa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 4998add3d43ef244daa965ebff9309fa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 4998add3d43ef244daa965ebff9309fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 4998add3d43ef244daa965ebff9309fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594935687799346437, guid: 4998add3d43ef244daa965ebff9309fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4998add3d43ef244daa965ebff9309fa, type: 3}
+--- !u!4 &3822401776496157513 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5594935687799346437, guid: 4998add3d43ef244daa965ebff9309fa, type: 3}
+  m_PrefabInstance: {fileID: 8696119328448165452}
+  m_PrefabAsset: {fileID: 0}

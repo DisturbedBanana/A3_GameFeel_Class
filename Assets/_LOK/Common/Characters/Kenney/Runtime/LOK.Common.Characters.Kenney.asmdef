@@ -1,0 +1,14 @@
+{
+  "name": "LOK.Common.Characters.Kenney",
+  "references": [
+    "IIMEngine.Movements2D",
+    "IIMEngine.Dialogues",
+    "IIMEngine.SFX",
+    "IIMEngine.Camera",
+    "LOK.Core.UserProfiles",
+    "LOK.Core.Attacks",
+    "LOK.Core.Rooms",
+    "LOK.Core.Items",
+    "LOK.Core.Interactions"
+  ]
+}

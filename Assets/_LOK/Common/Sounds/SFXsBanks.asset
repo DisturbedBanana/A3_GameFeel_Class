@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee3427d8d9ab449791a3e555afcc49bf, type: 3}
+  m_Name: SFXsBanks
+  m_EditorClassIdentifier: 
+  _datasList:
+  - _name: robot_voice_1
+    _clip: {fileID: 8300000, guid: 2aaee433e3eca5e45a36f10c148a3c2c, type: 3}
+    _sizeMax: 1
+    _isLooping: 0
+    _overflowOperation: 1
+  - _name: robot_voice_2
+    _clip: {fileID: 8300000, guid: dcb460ba2cab17144847cc48d8d86b24, type: 3}
+    _sizeMax: 1
+    _isLooping: 0
+    _overflowOperation: 1
+  - _name: robot_voice_3
+    _clip: {fileID: 8300000, guid: 20d93278355a5b74584d52b5fce1ea2d, type: 3}
+    _sizeMax: 1
+    _isLooping: 0
+    _overflowOperation: 1
+  - _name: robot_voice_4
+    _clip: {fileID: 8300000, guid: 0350a7ebdd8e5e649a3e8a226980aea7, type: 3}
+    _sizeMax: 1
+    _isLooping: 0
+    _overflowOperation: 1
+  - _name: puzzle_resolved
+    _clip: {fileID: 8300000, guid: 57ca54b245183cd49a7f71ba4a112441, type: 3}
+    _sizeMax: 1
+    _isLooping: 0
+    _overflowOperation: 1
+  - _name: chest_opening
+    _clip: {fileID: 8300000, guid: 8439d0842f171104e88b7f4ef0e778db, type: 3}
+    _sizeMax: 1
+    _isLooping: 0
+    _overflowOperation: 1
+  - _name: item_gained
+    _clip: {fileID: 8300000, guid: 98158fd804fb13c479e8e1a3ec8a6e34, type: 3}
+    _sizeMax: 1
+    _isLooping: 0
+    _overflowOperation: 1
+  - _name: validation_01
+    _clip: {fileID: 8300000, guid: 8d58b25813280f44680f177ae2e8c20e, type: 3}
+    _sizeMax: 1
+    _isLooping: 0
+    _overflowOperation: 1
+  - _name: validation_02
+    _clip: {fileID: 8300000, guid: 4ee595191c5fe864ca8720a6b07ebbad, type: 3}
+    _sizeMax: 1
+    _isLooping: 0
+    _overflowOperation: 1
+  - _name: drop_01
+    _clip: {fileID: 8300000, guid: 37bce7e12451fe747a818448e1ef04a6, type: 3}
+    _sizeMax: 1
+    _isLooping: 0
+    _overflowOperation: 1
+  - _name: sword_stab
+    _clip: {fileID: 8300000, guid: 464ab01bf8203944ab5e31d2f712ff52, type: 3}
+    _sizeMax: 1
+    _isLooping: 0
+    _overflowOperation: 1
+  - _name: chest_unlock
+    _clip: {fileID: 8300000, guid: f319788c6b2ad6948b93638949201341, type: 3}
+    _sizeMax: 1
+    _isLooping: 0
+    _overflowOperation: 1
+  - _name: alarm_01
+    _clip: {fileID: 8300000, guid: 4977c25d16d74a349983713541106d5c, type: 3}
+    _sizeMax: 1
+    _isLooping: 1
+    _overflowOperation: 1
+  - _name: alarm_02
+    _clip: {fileID: 8300000, guid: 482884d8273a85e47923ecc0e3c56a94, type: 3}
+    _sizeMax: 1
+    _isLooping: 1
+    _overflowOperation: 1
+  - _name: switch_on
+    _clip: {fileID: 8300000, guid: 464ab01bf8203944ab5e31d2f712ff52, type: 3}
+    _sizeMax: 1
+    _isLooping: 0
+    _overflowOperation: 1
+  - _name: switch_off
+    _clip: {fileID: 8300000, guid: 464ab01bf8203944ab5e31d2f712ff52, type: 3}
+    _sizeMax: 1
+    _isLooping: 0
+    _overflowOperation: 1
+  - _name: invalid_01
+    _clip: {fileID: 8300000, guid: 44c03306e65a8f044a7bb22dcbbd929c, type: 3}
+    _sizeMax: 1
+    _isLooping: 0
+    _overflowOperation: 1

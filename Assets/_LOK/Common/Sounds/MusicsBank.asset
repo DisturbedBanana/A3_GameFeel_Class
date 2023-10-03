@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9e84eb6107403f9892dbbe7ca5096b, type: 3}
+  m_Name: MusicsBank
+  m_EditorClassIdentifier: 
+  _musicDatas:
+  - _name: Cave
+    _mainClip: {fileID: 8300000, guid: fbc952380b144d146a82a10638ba5c00, type: 3}
+    _isLooping: 1
+    _hasIntro: 0
+    _introClip: {fileID: 0}
+    _hasOutro: 0
+    _outroClip: {fileID: 0}
+  - _name: Village
+    _mainClip: {fileID: 8300000, guid: 67a6970b6f4e9eb45bf50716b4347693, type: 3}
+    _isLooping: 1
+    _hasIntro: 1
+    _introClip: {fileID: 8300000, guid: eed0fcccd0d806e48bd1a8ecd0815f14, type: 3}
+    _hasOutro: 1
+    _outroClip: {fileID: 8300000, guid: 6969a3f1cbf6d704abc354159dcd844f, type: 3}
+  - _name: Exploration
+    _mainClip: {fileID: 8300000, guid: 7f943a7bfd358f34598a4a5ba959d9c7, type: 3}
+    _isLooping: 1
+    _hasIntro: 1
+    _introClip: {fileID: 8300000, guid: 48d0dc9f7ce98c3499093396556a3366, type: 3}
+    _hasOutro: 1
+    _outroClip: {fileID: 8300000, guid: 6969a3f1cbf6d704abc354159dcd844f, type: 3}
+  - _name: Dungeon
+    _mainClip: {fileID: 8300000, guid: 969f6dc69dcd05b4596f4243a7f00c69, type: 3}
+    _isLooping: 1
+    _hasIntro: 0
+    _introClip: {fileID: 0}
+    _hasOutro: 1
+    _outroClip: {fileID: 8300000, guid: 6fababfae084257478917d72126a963a, type: 3}

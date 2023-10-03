@@ -1,0 +1,4 @@
+{
+	"name": "IIMEngine.Entities.Target",
+	"references":[ "IIMEngine.Entities" ]
+}

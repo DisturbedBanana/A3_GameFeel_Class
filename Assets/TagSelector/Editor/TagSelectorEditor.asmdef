@@ -1,0 +1,9 @@
+{
+  "name": "TagSelectorEditor",
+  "includePlatforms": [
+    "Editor"
+  ],
+  "references": [
+    "TagSelector"
+  ]
+}

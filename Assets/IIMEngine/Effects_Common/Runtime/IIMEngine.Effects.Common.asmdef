@@ -1,0 +1,6 @@
+{
+	"name": "IIMEngine.Effects.Common",
+	"references": [
+		"IIMEngine.Effects"
+	]
+}

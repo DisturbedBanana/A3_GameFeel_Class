@@ -1,0 +1,8 @@
+{
+	"name": "LOK.Core.Debug",
+	"references": [
+		"IIMEngine.Save",
+		"LOK.Core.Rooms",
+		"Unity.TextMeshPro"
+	]
+}

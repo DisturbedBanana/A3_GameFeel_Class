@@ -1,0 +1,7 @@
+{
+  "name": "LOK.Core.Interactions",
+  "references": [
+    "TagSelector",
+    "IIMEngine.Dialogues"
+  ]
+}

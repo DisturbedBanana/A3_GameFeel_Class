@@ -1,0 +1,7 @@
+{
+	"name": "IIMEngine.Music.Feel",
+	"references": [
+		"IIMEngine.Music",
+		"MoreMountains.Feedbacks"
+	]
+}

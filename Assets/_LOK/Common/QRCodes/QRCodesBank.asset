@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89093c9fcef4412da86b343135de5d42, type: 3}
+  m_Name: QRCodesBank
+  m_EditorClassIdentifier: 
+  _datas:
+  - _name: CaveStart_MovingKenney
+    _title: Moving Kenney
+    _sprite: {fileID: 21300000, guid: 7c6b337c5f870934b9f6f943695b06a3, type: 3}
+    _URL: https://docs.google.com/presentation/d/1VT4vAVLtKKBmrNBgyUK7CkkdTBKbASeESpXQuOrJ-58/edit?usp=sharing
+  - _name: CaveStart_AnimatingKenney
+    _title: Animating Kenney
+    _sprite: {fileID: 21300000, guid: 3f702d58db2e3b1428f35826eb3d0026, type: 3}
+    _URL: https://docs.google.com/presentation/d/1DBGSGDUgYo-Kbqq2yhXlN5508eeq0MtSnM3p5UgF3Cc/edit?usp=sharing
+  - _name: CaveStart_MovementEffects
+    _title: Movement Effects
+    _sprite: {fileID: 21300000, guid: 4403fb78074821a4ea8548ef31ef438b, type: 3}
+    _URL: https://docs.google.com/presentation/d/1qvejE3AZBXEWE05hUD8r_HgPKn64O_GDfiuziFl151s/edit?usp=sharing
+  - _name: CaveStart_MovementsStateMachine
+    _title: Movements State Machine
+    _sprite: {fileID: 21300000, guid: b0d66b2193b5e07458f3ef451c27c6d2, type: 3}
+    _URL: https://docs.google.com/presentation/d/11FZS7AhaCmf8uPIbGrkzApeL0PvENvKqePem-keAKxQ/edit?usp=sharing
+  - _name: CaveStart_ScreenTransitions
+    _title: Screen Transitions
+    _sprite: {fileID: 21300000, guid: ca67c680b56b37b42a1402835d90ee61, type: 3}
+    _URL: https://docs.google.com/presentation/d/1lpAHYhilKetCpk6U25TcxfVk42wthrRGkTnzva6UIus/edit?usp=sharing
+  - _name: CaveStart_CameraProfiles
+    _title: Camera Profiles
+    _sprite: {fileID: 21300000, guid: f2b5bf5fca460004b98b564a9e0923b0, type: 3}
+    _URL: https://docs.google.com/presentation/d/1UNaOnmEFjNnCAm5jeW7o0g-jRtqFYrYqE-Na7dTT2Fs/edit?usp=sharing
+  - _name: CaveStart_CameraFollow
+    _title: Camera Follow
+    _sprite: {fileID: 21300000, guid: c8ba385c08a4d9a489cb712edb5ab276, type: 3}
+    _URL: https://docs.google.com/presentation/d/1IsQV9BiFVvHgVFsRg53sHe7mG_lIoqebRn5MeDu6BRA/edit?usp=sharing
+  - _name: CaveStart_SFXs
+    _title: Sounds SFXs
+    _sprite: {fileID: 21300000, guid: a4c68b0c62f108b4f972f2fffc9b4bcf, type: 3}
+    _URL: https://docs.google.com/presentation/d/1eShnFEOuGO_HGB2TSKt_LLDmBC7wRpVPoWqzfduxI2c/edit?usp=sharing
+  - _name: CaveStart_Music
+    _title: Musics
+    _sprite: {fileID: 21300000, guid: 2091c59b0993f3b429458d186086a0e0, type: 3}
+    _URL: https://docs.google.com/presentation/d/1BG69UUaaGGN6dOdA1ka1Tr6ScGExohCRmyXCVWnQpSk/edit?usp=sharing
+  - _name: CaveStart_Musics_Fade
+    _title: Musics Fade
+    _sprite: {fileID: 21300000, guid: 7bd44f4e990953b4990c74c0ba506e41, type: 3}
+    _URL: https://docs.google.com/presentation/d/13iZx1bNVh0oGGHzrZ3iXHHk-eDrSCYWjI4xck2Webig/edit?usp=sharing

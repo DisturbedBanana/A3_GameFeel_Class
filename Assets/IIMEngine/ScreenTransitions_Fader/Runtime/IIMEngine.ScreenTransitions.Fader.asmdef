@@ -1,0 +1,4 @@
+{
+	"name": "IIMEngine.ScreenTransitions.Fader",
+	"references":[ "IIMEngine.ScreenTransitions" ]
+}

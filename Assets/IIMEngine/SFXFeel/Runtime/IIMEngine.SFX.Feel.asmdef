@@ -1,0 +1,7 @@
+{
+	"name": "IIMEngine.SFX.Feel",
+	"references": [
+		"IIMEngine.SFX",
+		"MoreMountains.Feedbacks"
+	]
+}

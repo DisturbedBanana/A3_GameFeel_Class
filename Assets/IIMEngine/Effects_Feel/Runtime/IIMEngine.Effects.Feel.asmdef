@@ -1,0 +1,8 @@
+{
+	"name": "IIMEngine.Effects.Feel",
+	"references": [
+		"IIMEngine.Effects",
+		"IIMEngine.Entities.Target",
+		"MoreMountains.Feedbacks"
+	]
+}

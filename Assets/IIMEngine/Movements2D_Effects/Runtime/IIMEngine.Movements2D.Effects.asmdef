@@ -1,0 +1,8 @@
+{
+  "name": "IIMEngine.Movements2D.Effects",
+  "references": [
+    "IIMEngine.Effects",
+    "IIMEngine.Movements2D",
+    "IIMEngine.Entities.Target"
+  ]
+}

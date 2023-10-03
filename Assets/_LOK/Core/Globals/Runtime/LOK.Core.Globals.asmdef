@@ -1,0 +1,8 @@
+{
+	"name": "LOK.Core.Globals",
+	"references": [
+		"IIMEngine.Camera",
+		"LOK.Core.UserProfiles",
+		"LOK.Core.Rooms"
+	]
+}

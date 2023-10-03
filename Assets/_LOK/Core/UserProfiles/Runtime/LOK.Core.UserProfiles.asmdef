@@ -1,0 +1,11 @@
+{
+    "name": "LOK.Core.UserProfiles",
+    "overrideReferences": true,
+    "references": [
+        "Unity.TextMeshPro",
+        "IIMEngine.Save"
+    ],
+    "precompiledReferences": [
+        "LegendOfKenney_PasswordCrypter.dll"
+    ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "LOK.Core.Items.Feel",
+  "references": [
+    "LOK.Core.Items",
+    "MoreMountains.Feedbacks",
+    "IIMEngine.Entities.Target"
+  ]
+}

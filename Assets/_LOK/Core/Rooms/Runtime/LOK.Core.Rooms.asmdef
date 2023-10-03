@@ -1,0 +1,10 @@
+{
+  "name": "LOK.Core.Rooms",
+  "references": [
+    "IIMEngine.Save",
+    "IIMEngine.Camera",
+    "IIMEngine.Music",
+    "IIMEngine.ScreenTransitions",
+    "MoreMountains.Feedbacks"
+  ]
+}
