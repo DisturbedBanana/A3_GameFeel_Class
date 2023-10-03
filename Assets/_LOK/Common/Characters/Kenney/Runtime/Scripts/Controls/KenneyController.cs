@@ -11,6 +11,7 @@ namespace LOK.Common.Characters.Kenney
 
         private IMove2DDirWriter _moveDirWriter;
         private Interactor _interactor;
+        Vector2 _moveDir = Vector2.zero;
 
         private void Start()
         {
@@ -49,6 +50,22 @@ namespace LOK.Common.Characters.Kenney
             //TODO: Write MoveDir according to inputs
             //You can _GetInputMoveLeft /  _GetInputMoveRight() / _GetInputMoveUp() / _GetInputMoveDown()
             //Don't forget to normalize ;)
+
+            _moveDir = Vector2.zero;
+
+            if (_GetInputMoveLeft())
+                _moveDir += Vector2.left;
+            
+            if (_GetInputMoveRight())
+                _moveDir += Vector2.right;
+
+            if (_GetInputMoveUp())
+                _moveDir += Vector2.up;
+
+            if (_GetInputMoveDown())
+                _moveDir += Vector2.down;
+
+            _moveDirWriter.MoveDir = _moveDir.normalized;
         }
 
         private bool _GetInputDownAction()
