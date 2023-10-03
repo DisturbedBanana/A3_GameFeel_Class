@@ -36,10 +36,10 @@ namespace LOK.Common.Characters.Kenney
 
             if (!_lockedReader.AreMovementsLocked)
             {
-                
+                _orientWriter.OrientDir = Vector2.zero;
+                _speedWriter.MoveSpeed = 5f;
             }
-            _orientWriter.OrientDir = Vector2.zero;
-            _speedWriter.MoveSpeed = 5f;
+
         }
 
         private void Update()
