@@ -27,11 +27,13 @@ namespace LOK.Common.Characters.Kenney
         #pragma warning restore 0414
         #endregion
 
+        IMove2DDirReader _moveDirReader = null;
         private void Awake()
         {
+            _moveDirReader = _entityRoot.GetComponent<IMove2DDirReader>();
             _orientReader = _entityRoot.GetComponent<IMove2DOrientReader>();
             //Store _startScaleX using _orientRoot
-            _orientRoot.transform.localScale = new Vector3(_startScaleX, _orientRoot.transform.localScale.y, _orientRoot.transform.localScale.z);
+            _startScaleX = _orientRoot.transform.localScale.x;
         }
 
         private void OnEnable()
@@ -53,10 +55,12 @@ namespace LOK.Common.Characters.Kenney
         {
             //Detect if kenney need to flip ScaleX (using orientReader and current scale.x)
             //Bonus : you can create a flip animation using _flipDuration
-
-            if (_orientReader.OrientX != _orientRoot.transform.localScale.x && !_isFlipping)
+            if (_orientReader != null && _orientRoot != null && _moveDirReader != null)
             {
-                _flipDuration = Mathf.Abs(_orientReader.OrientX - _orientRoot.transform.localScale.x);
+                if (_orientReader.OrientX != _orientRoot.transform.localScale.x && !_isFlipping)
+                {
+                    OnEnable();
+                }
             }
         }
     }

@@ -21,6 +21,11 @@ namespace IIMEngine.Movements2D
         #pragma warning restore 0414
         #endregion
 
+        private IMove2DSpeedReader _speedReader;
+        private IMove2DLockedReader _lockedReader;
+        private Animator _animator;
+        private bool _isMoving;
+
         private void Awake()
         {
             //Convert _isMovingParameter to Hash 
@@ -29,15 +34,24 @@ namespace IIMEngine.Movements2D
             
             //Find Movable Interfaces inside _movableGameObject needed to check if object is moving
             //(You'll probably need to check if object movements are locked and if object move speed > 0)
+            _speedReader = _movableGameObject.GetComponent<IMove2DSpeedReader>();
+            _lockedReader = _movableGameObject.GetComponent<IMove2DLockedReader>();
             
             //Find Animator (attached to this gameObject)
+            _animator = _movableGameObject.GetComponentInChildren<Animator>();
         }
 
         private void Update()
         {
             //Check if object is moving (store it inside a bool)
+            if(_speedReader.MoveSpeed != 0 && !_lockedReader.AreMovementsLocked)
+                _isMoving = true;
+            else
+                _isMoving = false;
+
             //Bonus : Get Object movement speed and speed max to interpolate animator speed
             //Set animator parameter bool "IsMoving" according to movements infos
+            _animator.SetBool(_isMovingParameterHash, _isMoving);
         }
     }
 }

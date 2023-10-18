@@ -48,26 +48,65 @@ namespace LOK.Common.Characters.Kenney
         private void Start()
         {
             //Call ChangeState using StartState
+            ChangeState(StartState);
         }
 
         private void Update()
         {
-            //Call CurrentState StateUpdate
+            CurrentState.StateUpdate();
         }
 
         private void _InitAllStates()
         {
             //Call StateInit for all states
+            foreach (AKenneyState state in AllStates)
+            {
+                state.StateInit(this);
+            }
         }
 
         public void ChangeState(AKenneyState state)
         {
             //Call StateExit for current state (be careful, CurrentState can be null)
+            if (CurrentState != null)
+            {
+                switch (state)
+                {
+                    case KenneyStateIdle stateIdle:
+                        CurrentState = stateIdle;
+                        break;
+                    case KenneyStateWalk stateWalk:
+                        CurrentState = stateWalk;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                CurrentState = state;
+            }
 
             //Change PreviousState to CurrentState
+            PreviousState = CurrentState;
             //Change CurrentState using state in function parameter
+            CurrentState = state;
 
             //Call StateEnter for current state (be careful, CurrentState can be null)
+            if (CurrentState != null)
+            {
+                switch (state)
+                {
+                    case KenneyStateIdle stateIdle:
+                        state.StateEnter(PreviousState);
+                        break;
+                    case KenneyStateWalk stateWalk:
+                        state.StateEnter(PreviousState);
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
     }
 }
