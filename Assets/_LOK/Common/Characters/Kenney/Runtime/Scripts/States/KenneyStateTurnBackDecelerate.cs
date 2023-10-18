@@ -10,9 +10,16 @@ namespace LOK.Common.Characters.Kenney
 
         private float _timer = 0f;
 
-        #pragma warning restore 0414
+#pragma warning restore 0414
         #endregion
-        
+
+        IMove2DLockedReader _lockedReader = null;
+        IMove2DDirReader _dirReader = null;
+        IMove2DSpeedMaxReader _speedMaxReader = null;
+        IMove2DOrientReader _orientReader = null;
+        IMove2DSpeedWriter _speedWriter = null;
+        IMove2DTurnBackWriter _turnBackWriter = null;
+
         protected override void OnStateInit()
         {
             //Find Movable Interfaces inside StateMachine
@@ -23,6 +30,14 @@ namespace LOK.Common.Characters.Kenney
             // - Read Move Orient
             // - Write Move Speed
             // - Write Move IsTurningBack
+
+            _lockedReader = StateMachine.GetComponent<IMove2DLockedReader>();
+            _dirReader = StateMachine.GetComponent<IMove2DDirReader>();
+
+            if (!_lockedReader.AreMovementsLocked)
+            {
+
+            }
         }
 
         protected override void OnStateEnter(AKenneyState previousState)

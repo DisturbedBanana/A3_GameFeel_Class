@@ -19,7 +19,6 @@ namespace LOK.Common.Characters.Kenney
             // - Read Move SpeedMax
             // - Write Move Orient
             // - Write Move Speed
-            base.OnStateInit();
             _speedWriter = StateMachine.GetComponent<IMove2DSpeedWriter>();
             _lockedReader = StateMachine.GetComponent<IMove2DLockedReader>();
             _moveDirReader = StateMachine.GetComponent<IMove2DDirReader>();

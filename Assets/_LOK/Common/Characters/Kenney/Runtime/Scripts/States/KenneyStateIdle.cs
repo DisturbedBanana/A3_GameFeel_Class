@@ -12,7 +12,6 @@ namespace LOK.Common.Characters.Kenney
         protected override void OnStateInit()
         {
             //Find Movable Interfaces inside StateMachine
-            base.OnStateInit();
             _speedWriter = StateMachine.GetComponent<IMove2DSpeedWriter>();
             _lockedReader = StateMachine.GetComponent<IMove2DLockedReader>();
             _moveDirReader = StateMachine.GetComponent<IMove2DDirReader>();
@@ -27,7 +26,7 @@ namespace LOK.Common.Characters.Kenney
         protected override void OnStateEnter(AKenneyState previousState)
         {
             //Force MoveSpeed to 0
-            //_speedWriter.MoveSpeed = 0f;
+            _speedWriter.MoveSpeed = 0f;
         }
 
         protected override void OnStateUpdate()
