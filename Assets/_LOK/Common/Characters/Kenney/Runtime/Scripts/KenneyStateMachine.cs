@@ -54,6 +54,7 @@ namespace LOK.Common.Characters.Kenney
         private void Update()
         {
             CurrentState.StateUpdate();
+            Debug.Log(CurrentState);
         }
 
         private void _InitAllStates()
