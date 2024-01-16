@@ -38,7 +38,7 @@ namespace IIMEngine.Movements2D
             _lockedReader = _movableGameObject.GetComponent<IMove2DLockedReader>();
             
             //Find Animator (attached to this gameObject)
-            _animator = _movableGameObject.GetComponentInChildren<Animator>();
+            _animator = GetComponent<Animator>();
         }
 
         private void Update()

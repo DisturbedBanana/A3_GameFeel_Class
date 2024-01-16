@@ -68,18 +68,29 @@ namespace LOK.Common.Characters.Kenney
                 ChangeState(StateMachine.StateIdle);
             }
 
-            //If there is MoveDir and the angle between MoveDir and OrientDir > MovementsData.TurnBackAngleThreshold
-                //Go to StateAccelerate
+            //If there is MoveDir and the angle between MoveDir and OrientDir > MovementsData.TurnBackAngleThreshold, Go to StateAccelerate
+            if (_dirReader.MoveDir != Vector2.zero && Vector2.Angle(_dirReader.MoveDir, _orientReader.OrientDir) > MovementsData.TurnBackAngleThreshold)
+            {
+                ChangeState(StateMachine.StateTurnBackAccelerate);
+            }
+
+            _timer += Time.deltaTime;
 
 
-            //Increment _timer with deltaTime
+            if (_timer > MovementsData.TurnBackDecelerationDuration)
+            {
+                if (_dirReader.MoveDir != Vector2.zero)
+                {
+                    ChangeState(StateMachine.StateTurnBackAccelerate);
+                }
+                else
+                {
+                    ChangeState(StateMachine.StateIdle);
+                }
+            }
 
-            //If _timer > MovementsData.TurnBackDecelerationDuration
-                //Go to StateTurnBackAccelerate if there is MoveDir
-                //Go to StateIdle otherwise
-
-            //Calculate percent using timer and MovementsData.TurnBackDecelerationDuration
-            //Calculate MoveSpeed according to percent and MoveSpeedMax
+            float percent = _timer / MovementsData.TurnBackDecelerationDuration;
+            _speedWriter.MoveSpeed = Mathf.Lerp(_speedMaxReader.MoveSpeedMax, 0f, percent);
         }
     }
 }

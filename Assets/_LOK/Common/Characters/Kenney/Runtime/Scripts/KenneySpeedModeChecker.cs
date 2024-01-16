@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LOK.Common.Characters.Kenney.LOK.Core.UserProfiles;
+using System;
 using UnityEngine;
 
 namespace LOK.Common.Characters.Kenney

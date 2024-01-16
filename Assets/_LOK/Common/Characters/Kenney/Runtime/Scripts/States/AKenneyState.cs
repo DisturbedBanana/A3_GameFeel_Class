@@ -1,4 +1,5 @@
 ﻿using IIMEngine.Movements2D;
+using LOK.Common.Characters.Kenney.LOK.Core.UserProfiles;
 using LOK.Core.Room;
 using UnityEngine;
 

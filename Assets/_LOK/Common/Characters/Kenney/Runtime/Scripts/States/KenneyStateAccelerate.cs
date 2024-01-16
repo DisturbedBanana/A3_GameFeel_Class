@@ -62,9 +62,9 @@ namespace LOK.Common.Characters.Kenney
             }
 
             //If there is no MoveDir
-                //Go to StateDecelerate if MovementsData.StopDecelerationDuration > 0
-                //Go to StateIdle otherwise
-            if (_moveDirReader.MoveDir == Vector2.zero)
+            //Go to StateDecelerate if MovementsData.StopDecelerationDuration > 0
+            //Go to StateIdle otherwise
+            if (_moveDirReader == null)
             {
                 if (MovementsData.StopDecelerationDuration > 0)
                 {
@@ -75,38 +75,26 @@ namespace LOK.Common.Characters.Kenney
                     ChangeState(StateMachine.StateIdle);
                 }
             }
-            else
-            {
-                if (Vector2.Angle(_moveDirReader.MoveDir, _orientReader.OrientDir) > MovementsData.TurnBackAngleThreshold)
-                {
-                    if (MovementsData.TurnBackDecelerationDuration > 0)
-                    {
-                        ChangeState(StateMachine.StateTurnBackDecelerate);
-                    }
-                    else if (MovementsData.TurnBackAccelerationDuration > 0)
-                    {
-                        ChangeState(StateMachine.StateTurnBackDecelerate);
-                    }
-                    else
-                    {
-                        if (MovementsData.StartAccelerationDuration > 0f)
-                        {
-                            ChangeState(StateMachine.StateAccelerate);
-                        }
-                        else
-                        {
-                            ChangeState(StateMachine.StateWalk);
-                        }
-                    }
-                }
-            }
 
             //If the angle between MoveDir and OrientDir > MovementsData.TurnBackAngleThreshold
             //If MovementsData.TurnBackDecelerationDuration > 0 => Go to StateTurnBackDecelerate
             //Else If MovementsData.TurnBackAccelerationDuration > 0 => Go to StateTurnBackAccelerate
 
-            //Increment _timer with deltaTime
-            _timer += Time.deltaTime;
+            if (Vector2.Angle(_moveDirReader.MoveDir, _orientReader.OrientDir) > MovementsData.TurnBackAngleThreshold)
+            {
+                   if (MovementsData.TurnBackDecelerationDuration > 0)
+                {
+                    ChangeState(StateMachine.StateTurnBackDecelerate);
+                }
+                else if (MovementsData.TurnBackAccelerationDuration > 0)
+                {
+                    ChangeState(StateMachine.StateTurnBackAccelerate);
+                }
+            }
+
+
+                //Increment _timer with deltaTime
+                _timer += Time.deltaTime;
             
             //If _timer > MovementsData.StartAccelerationDuration
                 //Go to StateWalk (acceleration is finished)
