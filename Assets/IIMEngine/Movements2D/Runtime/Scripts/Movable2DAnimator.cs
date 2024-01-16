@@ -49,6 +49,7 @@ namespace IIMEngine.Movements2D
             else
                 _isMoving = false;
 
+
             //Bonus : Get Object movement speed and speed max to interpolate animator speed
             //Set animator parameter bool "IsMoving" according to movements infos
             _animator.SetBool(_isMovingParameterHash, _isMoving);

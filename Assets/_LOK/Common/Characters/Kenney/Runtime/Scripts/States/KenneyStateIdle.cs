@@ -17,16 +17,17 @@ namespace LOK.Common.Characters.Kenney
             _moveDirReader = StateMachine.GetComponent<IMove2DDirReader>();
 
             //You will need to write Speed and check if movements are locked and read MoveDir
-            //if (!_lockedReader.AreMovementsLocked && _moveDirReader.MoveDir != Vector2.zero)
-            //{
-            //    _speedWriter.MoveSpeed = 5f;
-            //}
+            if (!_lockedReader.AreMovementsLocked && _moveDirReader.MoveDir != Vector2.zero)
+            {
+                _speedWriter.MoveSpeed = 5f;
+            }
         }
 
         protected override void OnStateEnter(AKenneyState previousState)
         {
             //Force MoveSpeed to 0
             _speedWriter.MoveSpeed = 0f;
+            Debug.Log("Idle");
         }
 
         protected override void OnStateUpdate()

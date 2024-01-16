@@ -59,6 +59,7 @@ namespace LOK.Common.Characters.Kenney
             private void Update()
             {
                 CurrentState.StateUpdate();
+                //Debug.Log(CurrentState);
             }
 
             private void _InitAllStates()
@@ -66,7 +67,7 @@ namespace LOK.Common.Characters.Kenney
                 //Call StateInit for all states
                 foreach (AKenneyState state in AllStates)
                 {
-                    //state.StateInit(this);
+                    state.StateInit(this);
                 }
             }
 

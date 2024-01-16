@@ -92,8 +92,9 @@ namespace LOK.Common.Characters.Kenney
             //Calculate MoveSpeed according to percent and MoveSpeedMax
             //Force OrientDir to MoveDir
             float percent = _timer / MovementsData.TurnBackAccelerationDuration;
-            _speedWriter.MoveSpeed = percent * _speedMaxReader.MoveSpeedMax;
+            //_speedWriter.MoveSpeed = percent * _speedMaxReader.MoveSpeedMax;
             _orientWriter.OrientDir = _moveDirReader.MoveDir;
+
         }
     }
 }
