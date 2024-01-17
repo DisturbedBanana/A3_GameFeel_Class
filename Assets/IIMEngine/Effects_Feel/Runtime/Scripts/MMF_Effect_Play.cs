@@ -34,6 +34,7 @@ namespace IIMEngine.Effects.Feel
         protected override void CustomPlayFeedback(Vector3 position, float feedbacksIntensity = 1)
         {
             //PlayEffect with _effectId inside _effectsControllers
+            foreach (var effect in _effectsControllers) effect.PlayEffect(_effectID);
         }
     }
 }

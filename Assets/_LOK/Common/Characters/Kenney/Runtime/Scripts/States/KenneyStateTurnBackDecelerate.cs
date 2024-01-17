@@ -90,7 +90,7 @@ namespace LOK.Common.Characters.Kenney
             }
 
             float percent = _timer / MovementsData.TurnBackDecelerationDuration;
-            _speedWriter.MoveSpeed = Mathf.Lerp(_speedMaxReader.MoveSpeedMax, 0f, percent);
+            _speedWriter.MoveSpeed = percent * _speedMaxReader.MoveSpeedMax;
         }
     }
 }

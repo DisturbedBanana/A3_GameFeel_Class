@@ -1473,11 +1473,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _effectID: Shake
-  _delayBefore: 0
+  _delayBefore: 1
   _objectToShake: {fileID: 2845068576964658038}
   _shakePowerX: 0.1
   _shakePowerY: 0.1
-  _shakePeriod: 3
+  _shakePeriod: 5
 --- !u!1 &6627792128423524449
 GameObject:
   m_ObjectHideFlags: 0
