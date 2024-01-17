@@ -27,7 +27,6 @@ namespace LOK.Common.Characters.Kenney
         {
             //Force MoveSpeed to 0
             _speedWriter.MoveSpeed = 0f;
-            Debug.Log("Idle");
         }
 
         protected override void OnStateUpdate()

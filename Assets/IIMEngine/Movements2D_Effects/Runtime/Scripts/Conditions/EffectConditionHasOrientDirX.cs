@@ -24,7 +24,7 @@ namespace IIMEngine.Movements2D.Effects.Conditions
         public override bool IsValid()
         {
             //TODO: Check if target OrientDir.X is not null (using OrientReader)
-            return false;
+            return _orientReader.OrientDir.x != 0;
         }
     }
 }

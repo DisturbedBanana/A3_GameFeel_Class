@@ -36,8 +36,11 @@ namespace IIMEngine.Effects.Common
         protected override void OnEffectReset()
         {
             //Reset Timer
+            _timer = 0f;
             //Remove position delta from objectToMove localPosition
+            _objectToMove.localPosition -= _positionDelta;
             //Reset position delta Y
+            _positionDelta.y = 0f;
         }
 
         protected override IEnumerator OnEffectEndCoroutine()
@@ -51,24 +54,46 @@ namespace IIMEngine.Effects.Common
                 //Set positionDelta Y according to percentage and jumpHeight
                 //Add position Delta to objectToMove localPosition
                 //Wait for next frame (with yield instruction)
+            while (_timer < _jumpPeriod)
+            {
+                _objectToMove.localPosition -= _positionDelta;
+                _timer += Time.deltaTime;
+                float percentage = _timer / _jumpPeriod;
+                _jumpCurve.Evaluate(_jumpCurve.Evaluate(percentage));
+                _positionDelta.y = percentage * _jumpHeight;
+                _objectToMove.localPosition += _positionDelta;
+                yield return null;
+            }
             yield break;
         }
         
         protected override void OnEffectEnd()
         {
             //Reset Timer
+            _timer = 0f;
             //Remove position delta from objectToMove localPosition
+            _objectToMove.localPosition -= _positionDelta;
             //Reset position delta Y
+            _positionDelta.y = 0f;
         }
 
         protected override void OnEffectUpdate()
         {
             //Remove position delta from objectToMove localPosition
+            _objectToMove.localPosition -= _positionDelta;
             //Increment timer with delta time (bonus : Applying factor to deltaTime using timeModifier)
+            _timer += Time.deltaTime * _timeModifier.GetValue();
             //If effect is looping, timer must loop between [0, jumpPeriod]
             //Calculating percentage between timer and jumpPeriod
             //Set positionDelta Y according to percentage and jumpHeight
             //Add position Delta to objectToMove localPosition
+            if (_isLooping)
+            {
+                _timer = Mathf.Repeat(_timer, _jumpPeriod);
+            }
+            float percentage = _timer / _jumpPeriod;
+            _positionDelta.y = _jumpCurve.Evaluate(percentage) * _jumpHeight;
+            _objectToMove.localPosition += _positionDelta;
         }
     }
 }

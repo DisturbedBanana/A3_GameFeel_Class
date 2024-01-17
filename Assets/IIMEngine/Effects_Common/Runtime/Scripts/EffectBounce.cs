@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Threading;
 using IIMEngine.Effects;
 using UnityEngine;
 
@@ -39,40 +40,68 @@ namespace IIMEngine.Effects.Common
         protected override void OnEffectReset()
         {
             //Reset Timer
+            _timer = 0f;
             //Remove scale delta from objectToScale localScale
+            _objectToScale.localScale -= _scaleDelta;
             //Reset scale delta X/Y
+            _scaleDelta.x = 0f;
+            _scaleDelta.y = 0f;
         }
 
         protected override IEnumerator OnEffectEndCoroutine()
         {
             //TODO: Do not interrupt bouncing effect
             //Wait for bounce period
-                //Remove scale delta from objectToScale localScale
-                //Increment Timer with delta time
-                //Calculating percentage between timer and bouncePeriod
-                //Applying animation curve on percentage
-                //Set scale delta X/Y according to percentage and bounceFactorX/bounceFactorY
-                //Add scale delta from objectToScale localScale
-                //Wait for next frame (with yield instruction)
-            
+            //Remove scale delta from objectToScale localScale
+            //Increment Timer with delta time
+            //Calculating percentage between timer and bouncePeriod
+            //Applying animation curve on percentage
+            //Set scale delta X/Y according to percentage and bounceFactorX/bounceFactorY
+            //Add scale delta from objectToScale localScale
+            //Wait for next frame (with yield instruction)
+            while (_timer < _bouncePeriod)
+            {
+                _objectToScale.localScale -= _scaleDelta;
+                _timer += Time.deltaTime;
+                float percentage = _timer / _bouncePeriod;
+                _scaleDelta.x = _bounceFactorX * _bounceCurveX.Evaluate(percentage);
+                _scaleDelta.y = _bounceFactorY * _bounceCurveY.Evaluate(percentage);
+                _objectToScale.localScale += _scaleDelta;
+                yield return null;
+            }
+
             yield break;
         }
 
         protected override void OnEffectEnd()
         {
             //Reset Timer
+            _timer = 0f;
             //Remove scale delta from objectToScale localScale
+            _objectToScale.localScale -= _scaleDelta;
             //Reset scale delta X/Y
+            _scaleDelta.x = 0f;
+            _scaleDelta.y = 0f;
         }
         
         protected override void OnEffectUpdate()
         {
             //Remove scale delta from objectToScale localScale
+            _objectToScale.localScale -= _scaleDelta;
             //Increment timer with delta time (bonus : Applying factor to deltaTime using timeModifier)
+            _timer += Time.deltaTime * _timeModifier.GetValue();
             //If effect is looping, timer must loop between [0, bouncePeriod]
+            if (_isLooping)
+            {
+                _timer = Mathf.Repeat(_timer, _bouncePeriod);
+            }
             //Calculating percentage between timer and bouncePeriod
+            float percentage = _timer / _bouncePeriod;
             //Set scale delta X/Y according to percentage and bounceFactorX/bounceFactorY
+            _scaleDelta.x = _bounceFactorX * _bounceCurveX.Evaluate(percentage);
+            _scaleDelta.y = _bounceFactorY * _bounceCurveY.Evaluate(percentage);
             //Add scale delta from objectToScale localScale
+            _objectToScale.localScale += _scaleDelta;
         }
     }
 }

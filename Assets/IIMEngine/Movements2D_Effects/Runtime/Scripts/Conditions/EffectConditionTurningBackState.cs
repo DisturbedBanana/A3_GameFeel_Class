@@ -33,7 +33,7 @@ namespace IIMEngine.Movements2D.Effects.Conditions
         public override bool IsValid()
         {
             //TODO: Check if target is turning back (using TurnBackReader)
-            return false;
+            return _turnBackReader.IsTurningBack;
         }
     }
 }

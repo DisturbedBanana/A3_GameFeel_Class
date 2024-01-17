@@ -37,41 +37,63 @@ namespace IIMEngine.Effects.Common
         protected override void OnEffectReset()
         {
             //Reset Timer
+            _timer = 0f;
             //Remove rotation delta from objectToRotate localRotation (using eulerAngles)
+            _objectToRotate.localEulerAngles -= _eulerAnglesDelta;
             //Reset rotation delta Z
+            _eulerAnglesDelta.z = 0f;
         }
 
         protected override IEnumerator OnEffectEndCoroutine()
         {
             //TODO: Do not interrupt rotation
             //Wait for rotation stop delay (while loop)
-                //Remove rotation delta from objectToRotate localRotation (using eulerAngles)
-                //Increment Timer with delta time
-                //Calculating percentage between timer and rotationPeriod
-                //Applying animation curve on percentage
-                //Set eulerAngles delta Z according to percentage and rotationAngle
-                //Add rotation delta from objectToRotate localRotation (using eulerAngles)
-                //Wait for next frame (with yield instruction)
-                
-            
+            //Remove rotation delta from objectToRotate localRotation (using eulerAngles)
+            //Increment Timer with delta time
+            //Calculating percentage between timer and rotationPeriod
+            //Applying animation curve on percentage
+            //Set eulerAngles delta Z according to percentage and rotationAngle
+            //Add rotation delta from objectToRotate localRotation (using eulerAngles)
+            //Wait for next frame (with yield instruction)
+            while (_timer < _rotationStopDelay) ;
+            _objectToRotate.localEulerAngles -= _eulerAnglesDelta;
+            _timer += Time.deltaTime;
+            float percentage = Mathf.PingPong(_timer, _rotationPeriod) / _rotationPeriod;
+            _rotationCurve.Evaluate(percentage);
+            _eulerAnglesDelta.z = _rotationAngle * percentage;
+            _objectToRotate.localEulerAngles += _eulerAnglesDelta;
+
+
             yield break;
         }
         
         protected override void OnEffectEnd()
         {
             //Reset Timer
+            _timer = 0f;
             //Remove rotation delta from objectToRotate localRotation (using eulerAngles)
+            _objectToRotate.localEulerAngles -= _eulerAnglesDelta;
             //Reset rotation delta Z
+            _eulerAnglesDelta.z = 0f;
         }
 
         protected override void OnEffectUpdate()
         {
             //Remove rotation delta from objectToRotate localRotation (using eulerAngles)
+            _objectToRotate.localEulerAngles -= _eulerAnglesDelta;
             //Increment timer with delta time (bonus : Applying factor to deltaTime using timeModifier)
+            _timer += Time.deltaTime * _timeModifier.GetValue();
             //If effect is looping, timer must loop between [0, rotationPeriod]
+            if (_isLooping)
+            {
+                _timer = Mathf.Repeat(_timer, _rotationPeriod);
+            }
             //Calculating percentage between timer and rotationPeriod
+            float percentage = _timer / _rotationPeriod;
             //Set eulerAngles Z according to percentage and rotationAngle
+            _eulerAnglesDelta.z = _rotationAngle * percentage;
             //Add rotation delta from objectToRotate localRotation (using eulerAngles)
+            _objectToRotate.localEulerAngles += _eulerAnglesDelta;
         }
     }
 }
