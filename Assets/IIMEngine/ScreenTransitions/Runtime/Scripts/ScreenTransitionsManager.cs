@@ -36,7 +36,7 @@ namespace IIMEngine.ScreenTransitions
         public IEnumerator PlayAndWaitTransition(string transitionID)
         {
             //Call PlayTransition and wait until transition is finished
-            yield break;
+            yield return PlayTransition(transitionID);
         }
 
         public ScreenTransition PlayTransition(string transitionID)
@@ -44,18 +44,32 @@ namespace IIMEngine.ScreenTransitions
             //Find Transition using transitionID and return it
             //Play Transition if transition found
             //Return Transition
+            foreach (var transition in _allTransitions)
+            {
+                if (transition.TransitionID == transitionID)
+                {
+                    transition.Play();
+                    return transition;
+                }
+            }
+            Debug.Log("transition is null");
             return null;
         }
 
         private ScreenTransition[] _FindAllTransitions()
         {
             //Find All ScreenTransitions
+            ScreenTransition[] transitions = GetComponentsInChildren<ScreenTransition>();
             return Array.Empty<ScreenTransition>();
         }
 
         private void _InitAllTransitions()
         {
             //Call ScreenTransition.Init() method for each found transitions inside _allTransitions
+            foreach (var transition in _allTransitions)
+            {
+                transition.Init();
+            }
         }
     }
 }

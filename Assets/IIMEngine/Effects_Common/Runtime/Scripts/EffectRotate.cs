@@ -55,16 +55,16 @@ namespace IIMEngine.Effects.Common
             //Set eulerAngles delta Z according to percentage and rotationAngle
             //Add rotation delta from objectToRotate localRotation (using eulerAngles)
             //Wait for next frame (with yield instruction)
-            while (_timer < _rotationStopDelay) ;
-            _objectToRotate.localEulerAngles -= _eulerAnglesDelta;
-            _timer += Time.deltaTime;
-            float percentage = Mathf.PingPong(_timer, _rotationPeriod) / _rotationPeriod;
-            _rotationCurve.Evaluate(percentage);
-            _eulerAnglesDelta.z = _rotationAngle * percentage;
-            _objectToRotate.localEulerAngles += _eulerAnglesDelta;
-
-
-            yield break;
+            while (_timer < _rotationStopDelay)
+            {
+                _objectToRotate.localEulerAngles -= _eulerAnglesDelta;
+                _timer += Time.deltaTime;
+                float percentage = Mathf.PingPong(_timer, _rotationPeriod) / _rotationPeriod;
+                _rotationCurve.Evaluate(percentage);
+                _eulerAnglesDelta.z = _rotationAngle * percentage;
+                _objectToRotate.localEulerAngles += _eulerAnglesDelta;
+                yield return null;
+            }
         }
         
         protected override void OnEffectEnd()
@@ -91,7 +91,7 @@ namespace IIMEngine.Effects.Common
             //Calculating percentage between timer and rotationPeriod
             float percentage = _timer / _rotationPeriod;
             //Set eulerAngles Z according to percentage and rotationAngle
-            _eulerAnglesDelta.z = _rotationAngle * percentage;
+            //_eulerAnglesDelta.z = _rotationAngle * percentage;
             //Add rotation delta from objectToRotate localRotation (using eulerAngles)
             _objectToRotate.localEulerAngles += _eulerAnglesDelta;
         }

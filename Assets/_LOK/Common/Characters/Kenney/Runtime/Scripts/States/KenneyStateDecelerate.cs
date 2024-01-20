@@ -101,7 +101,7 @@ namespace LOK.Common.Characters.Kenney
             //Calculate percent using timer and MovementsData.StopDecelerationDuration
             //Calculate MoveSpeed according to percent and MoveSpeedMax
             float percent = _timer / MovementsData.StopDecelerationDuration;
-            _speedWriter.MoveSpeed = percent * _speedMaxReader.MoveSpeedMax;
+            //_speedWriter.MoveSpeed = percent * _speedMaxReader.MoveSpeedMax;
 
 
         }

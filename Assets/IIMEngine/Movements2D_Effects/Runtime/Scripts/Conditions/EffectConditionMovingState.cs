@@ -35,11 +35,8 @@ namespace IIMEngine.Movements2D.Effects.Conditions
         public override bool IsValid()
         {
             //TODO: Check if target is moving (using MoveLockedReader and MoveDirReader)
-            if (_moveCheckState == MoveCheckState.Moving)
-            {
-                return !_moveLockedReader.AreMovementsLocked && _moveDirReader.MoveDir != Vector2.zero;
-            }
-            return false;
+            return !_moveLockedReader.AreMovementsLocked && _moveDirReader.MoveDir != Vector2.zero;
+
         }
     }
 }
