@@ -17,18 +17,21 @@ namespace IIMEngine.Camera
         public static void Register(CameraFollowable followable)
         {
             //Add Followable into _allFollowables List
+            _allFollowables.Add(followable);
         }
 
         public static void Unregister(CameraFollowable followable)
         {
             //Remove Followable into _allFollowables List
+            _allFollowables.Remove(followable);
         }
 
         public static CameraFollowable[] FindByGroups(string[] groups)
         {
             //TODO: Find Followable matching with groups provided
             //You can use Linq Intersect Function (but be careful, it costs memory allocation ;) )
-            return Array.Empty<CameraFollowable>();
+            var matchingFollowables = _allFollowables.Where(f => f.TargetGroups.Intersect(groups).Any()).ToArray();
+            return matchingFollowables;
         }
     }
 }

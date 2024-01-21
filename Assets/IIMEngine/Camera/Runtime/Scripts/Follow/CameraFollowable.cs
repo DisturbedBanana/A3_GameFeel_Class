@@ -24,11 +24,13 @@ namespace IIMEngine.Camera
         private void OnEnable()
         {
             //Register this object into static class CameraFollowables
+            CameraFollowables.Register(this);
         }
 
         private void OnDisable()
         {
             //Unregister this object into static class CameraFollowables
+            CameraFollowables.Unregister(this);
         }
     }
 }

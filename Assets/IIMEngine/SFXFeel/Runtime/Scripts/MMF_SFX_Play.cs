@@ -19,6 +19,7 @@ namespace IIMEngine.SFX.Feel
         protected override void CustomPlayFeedback(Vector3 position, float feedbacksIntensity = 1)
         {
             //TODO: Call SFXsManager PlaySound with _sfxName
+            SFXsManager.Instance.PlaySound(_sfxName);
         }
     }
 }
