@@ -52,7 +52,6 @@ namespace IIMEngine.ScreenTransitions
                     return transition;
                 }
             }
-            Debug.Log("transition is null");
             return null;
         }
 
@@ -60,7 +59,7 @@ namespace IIMEngine.ScreenTransitions
         {
             //Find All ScreenTransitions
             ScreenTransition[] transitions = GetComponentsInChildren<ScreenTransition>();
-            return Array.Empty<ScreenTransition>();
+            return transitions;
         }
 
         private void _InitAllTransitions()
